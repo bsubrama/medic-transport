@@ -17,12 +17,12 @@ var test_sparrowsms = function () {
   d.start();
 
   var message = {
-    to: '+9779811685287', content: 'sapiMedic This is a test message'
+    to: '9811685287', content: 'sapiMedic This is a test message'
   };
 
-  d.send(message, function (_err) {
-    console.log('** sent: ', JSON.stringify(message));
-  });
+  d.send(message, function (_err, _result) {
+    console.log('** sent: ', JSON.stringify(message), " result: ", _result, " error: ", _err);
+  });	
 };
 
 test_sparrowsms();
